@@ -43,9 +43,37 @@ Results are shown as a clean, structured JSON report in the UI.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/your-username/rag-chatbot-alice.git
 cd rag-chatbot-alice
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/rag-chatbot-alice.git
+cd rag-chatbot-alice
+
+### 2. Create and Fill in Environment Variables
+Create a file called api.env in the root directory with the following:
+```bash
+AZURE_OPENAI_API_KEY=your_azure_api_key
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+AZURE_OPENAI_API_VERSION=2023-12-01-preview
+AZURE_OPENAI_EMBEDDING_DEPLOYMENT=text-embedding-3-large
+OPENAI_API_KEY=your_openai_key_if_needed_for_ragas
+
+### 3. Install Dependencies
+Make sure you're using Python 3.10 or 3.11, then run:
+```bash
+pip install -r requirements.txt
+
+### 4. Build the Vector Index
+```bash
+python build_index.py
+
+### 5. Launch the Streamlit App
+```bash
+streamlit run streamlit_app.py
+
